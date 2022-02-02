@@ -29,12 +29,20 @@ Invalid Fee output: This occurs due when non standard plate number is entered, i
 
 ## Screenshots
  - Main GUI
+
+
 ![image](https://user-images.githubusercontent.com/81807980/152167557-46cb0cf6-ae4a-4c04-85bf-d98f49586085.png)
  - Create Ticket
+
+
 ![image](https://user-images.githubusercontent.com/81807980/152167869-5aceffaf-c7c1-483a-acad-02fc2ba47351.png)
  - Parking Ticket generated
+
+
 ![pid_4502](https://user-images.githubusercontent.com/81807980/152170432-029709fd-fdb0-45c5-afbb-f40bc2b6b970.png)
  - Checking Ticket on Exit
+
+
 ![image](https://user-images.githubusercontent.com/81807980/152168799-6bd53dd3-e647-45fd-9a84-a7b3db42a567.png)
 
 
