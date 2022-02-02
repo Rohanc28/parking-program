@@ -8,9 +8,8 @@ from PIL import ImageFont
 from PIL import ImageDraw
 from datetime import datetime
 from datetime import date
-# 480 by 200 px
-# W-VOL-POL-0935-280901
-# white volks polo 9:35 28/09/01
+
+# ticket: 480 by 200 px PNG format
 
 
 def dater():
@@ -37,7 +36,6 @@ def testEan(car_hash):
 
 
 def ticket_gen(car_hash="Invalid"):
-    #car_hash = "WVOLPOL2809010935"
 
     testEan(str(car_hash).upper())
     image = cv2.imread('barcode_id.png')
@@ -62,18 +60,14 @@ def ticket_gen(car_hash="Invalid"):
 
     #cv2.imshow('thresh', thresh)
     #cv2.imshow('dilate', dilate)
+    
     #cv2.imshow('image', image)
     # cv2.waitKey(0)
+    #           uncomment cv2.waitkey, imshow image to auto load image when generated.
+    
     filename = 'pid_'+str(id_no)+'.png'
     print(id_no)
     if not cv2.imwrite(filename, image):
         raise Exception("Could not save image")
 
     return (id_no)
-
-
-#car_hash = "WVOLPOL2809010935"
-
-#car_hash = "RJ14CK2030"
-
-# ticket_gen(car_hash)
