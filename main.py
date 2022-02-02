@@ -7,11 +7,8 @@ import tkinter.messagebox
 from datetime import datetime
 from datetime import date
 
-# =========================================# functions
-
 
 #=========================================#
-
 #=========================================#
 
 
@@ -27,7 +24,8 @@ class pms:
         carPlate = StringVar()
         #entr_time = StringVar()
 
-        #=========================================#
+        
+# =========================================# functions
 
         def genticket():
             # car_hash = "MH01AE8017"
@@ -56,9 +54,6 @@ class pms:
             self.txtmodel.delete(0, END)
 
         # def display():
-        #    info.delete(0, END)
-        #
-        #    pass
 
         def iExit():
             iExit = tkinter.messagebox.askyesno(
@@ -68,6 +63,7 @@ class pms:
                 return
 
         #=========================================#
+        
 
         MainFrame = Frame(self.root, bg="SteelBlue3")
         MainFrame.grid()
@@ -119,7 +115,6 @@ class pms:
         self.txtmodel.grid(row=2, column=1, sticky=W)
 
         # =========================================# R box
-        # scrollbar =
 
         info = Listbox(DataFrameR, width=31, height=8,
                        font=('serif', 12, 'bold'))
@@ -139,7 +134,10 @@ class pms:
         self.btnex = Button(ButtonFrame, text="Exit", font=(
             'serif', 20, 'bold'), height=1, width=10, bd=4, command=iExit)
         self.btnex.grid(row=0, column=3)
-
+    
+    
+        #=========================================#
+        #=========================================#
 
 if __name__ == '__main__':
     root = Tk()
