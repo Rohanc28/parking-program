@@ -28,10 +28,6 @@ Invalid Fee output: This occurs due when non standard plate number is entered, i
  5. Default Rate is INR 0.25 per min [changeable]
 
 ## Screenshots
- - Main GUI
-
-
-![image](https://user-images.githubusercontent.com/81807980/152167557-46cb0cf6-ae4a-4c04-85bf-d98f49586085.png)
  - Create Ticket
 
 
