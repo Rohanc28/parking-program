@@ -23,7 +23,7 @@ Invalid Fee output: This occurs due when non standard plate number is entered, i
 
  1. When a car arrives at entry gate, the user can enter the number plate and car brand and create a ticket and ticketId.
  2. The time of arrival is automatically stored in ticket
- 3. When the car goes to exit gate, the user can verify the ticket by entering the Id (in turn scanning from local storage, will be using camera approach soon)
+ 3. When the car goes to exit gate, the user can verify the ticket by cam scanning the barcode and comparing the strings.
  4. If the strings match, then the exit_check.py will generate the parking fee. 
  5. Default Rate is INR 0.25 per min [changeable]
 
