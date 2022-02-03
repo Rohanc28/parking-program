@@ -42,7 +42,10 @@ Invalid Fee output: This occurs due when non standard plate number is entered, i
 ![pid_4502](https://user-images.githubusercontent.com/81807980/152170432-029709fd-fdb0-45c5-afbb-f40bc2b6b970.png)
  - Checking Ticket on Exit
 
+![camera_3](https://user-images.githubusercontent.com/81807980/152356734-945e55ae-d7b0-4c4f-afb7-3ed5e742bd56.png)
+
 
 ![image](https://user-images.githubusercontent.com/81807980/152168799-6bd53dd3-e647-45fd-9a84-a7b3db42a567.png)
+
 
 
