@@ -68,6 +68,7 @@ class pms:
             self.txtcarID.delete(0, END)
             self.txtcarp.delete(0, END)
             self.txtmodel.delete(0, END)
+            info.delete(0, END)
 
         # def display():
         #    info.delete(0, END)
