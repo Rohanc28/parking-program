@@ -1,14 +1,13 @@
 import random
 import ticket_gen
 import exit_check
+import cam
 from tkinter import *
 import tkinter.messagebox
 # import db
 from datetime import datetime
 from datetime import date
 
-
-#=========================================#
 #=========================================#
 
 
@@ -22,10 +21,9 @@ class pms:
         carId = StringVar()
         carCompany = StringVar()
         carPlate = StringVar()
-        #entr_time = StringVar()
+        # entr_time = StringVar()
 
-        
-# =========================================# functions
+        #=========================================#
 
         def genticket():
             # car_hash = "MH01AE8017"
@@ -39,11 +37,29 @@ class pms:
 
         def checkticket():
 
-            if(len(carId.get()) != 0):
+            curr_time = ticket_gen.dater()[-4:]
+            plate = str(carPlate.get()).upper()
+            if(len(plate) != 0):
                 # print(carPlate.get())
-                f = exit_check.chexit(carId.get(), carPlate.get())
-                info.delete(0, END)
-                info.insert(END, carId.get(), ("INR: "+str(f)+"/-"), str(" "))
+                # f = exit_check.chexit(carPlate.get())
+                cam.capture(plate)
+                # this function may get stuck, restart the program in such case
+
+                with open("barcode_result.txt", mode='r') as file:
+                    f = str(file.readlines())
+                    print(plate+"\n--\n"+str(f)[5:-12])
+                    if plate == str(f)[5:-12]:
+                        curr_time = ticket_gen.dater()[-4:]
+                        fee = (int(curr_time)-int(str(f)[-6:-2]))
+                        fee /= 4
+
+                        info.delete(0, END)
+                        info.insert(END, "CAR: "+str(carPlate.get()),
+                                    ("INR: "+str(fee)+"/-"), str(" "))
+                    else:
+                        info.insert(END, "CAR: "+str(carPlate.get()),
+                                    ("*Invalid Plate or Ticket"))
+                    file.close()
 
             else:
                 pass
@@ -54,6 +70,9 @@ class pms:
             self.txtmodel.delete(0, END)
 
         # def display():
+        #    info.delete(0, END)
+        #
+        #    pass
 
         def iExit():
             iExit = tkinter.messagebox.askyesno(
@@ -63,7 +82,6 @@ class pms:
                 return
 
         #=========================================#
-        
 
         MainFrame = Frame(self.root, bg="SteelBlue3")
         MainFrame.grid()
@@ -115,6 +133,7 @@ class pms:
         self.txtmodel.grid(row=2, column=1, sticky=W)
 
         # =========================================# R box
+        # scrollbar =
 
         info = Listbox(DataFrameR, width=31, height=8,
                        font=('serif', 12, 'bold'))
@@ -134,10 +153,7 @@ class pms:
         self.btnex = Button(ButtonFrame, text="Exit", font=(
             'serif', 20, 'bold'), height=1, width=10, bd=4, command=iExit)
         self.btnex.grid(row=0, column=3)
-    
-    
-        #=========================================#
-        #=========================================#
+
 
 if __name__ == '__main__':
     root = Tk()
