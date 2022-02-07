@@ -53,7 +53,8 @@ def camera(plate):
     camera.release()
     cv2.destroyAllWindows()
 
-
+# this function is to kill the camera window and prevent it from staying active forever. 
+# you can change the kill time from time.sleep( x seconds) 
 def capture(plate):
     p = multiprocessing.Process(target=camera, name="cam", args=(plate,))
     p.start()
