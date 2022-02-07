@@ -28,7 +28,7 @@ def dater():
 
 def testEan(car_hash):
     car_hash += (str(dater()))
-    print(car_hash)
+    #print(car_hash)
     EAN = barcode.get_barcode_class('code128')
     ean = EAN(car_hash, writer=ImageWriter())
 
