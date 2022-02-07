@@ -27,7 +27,7 @@ Invalid Fee output: This occurs due when non standard plate number is entered, i
  4. If the strings match, then the exit_check.py will generate the parking fee. 
  5. Default Rate is INR 0.25 per min [changeable]
 
-## Screenshots
+## EXAMPLE Screenshots
  - Create Ticket
 
 
