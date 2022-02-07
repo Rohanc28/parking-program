@@ -47,14 +47,14 @@ class pms:
 
                 with open("barcode_result.txt", mode='r') as file:
                     f = str(file.readlines())
-                    print(plate+"\n--\n"+str(f)[5:-12])
+                    # print(plate+"\n--\n"+str(f)[5:-12])
                     if plate == str(f)[5:-12]:
                         curr_time = ticket_gen.dater()[-4:]
                         fee = (int(curr_time)-int(str(f)[-6:-2]))
-                        fee /= 4
+                        fee *= 1
 
                         info.delete(0, END)
-                        info.insert(END, "CAR: "+str(carPlate.get()),
+                        info.insert(END, "CAR: "+str(carPlate.get()).upper(),
                                     ("INR: "+str(fee)+"/-"), str(" "))
                     else:
                         info.insert(END, "CAR: "+str(carPlate.get()),
