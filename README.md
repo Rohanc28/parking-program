@@ -16,7 +16,7 @@ Download the repo and pip install these libraries (if you have not installed the
 
 ### Known error:
 
-Invalid Fee output: This occurs due when non standard plate number is entered, i.e. Less than 10 digits.
+Invalid Fee output: This occurs due when either scanner had a bad read or a non standard plate number is entered, i.e. not 10 digits.
 
 
 ## Working:
